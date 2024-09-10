@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .background-title {
+            font-size: 100px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+            z-index: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #welcome-message {
+            font-size: 24px;
+            margin: 20px 0;
+            z-index: 1;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-title"></div>
+    
+    <p id="welcome-message">Please log in or sign up to continue.</p>
+    
+    <div class="buttons" id="buttons">
+        <button onclick="location.href='/login'">Login</button>
+        <button onclick="location.href='/signup'">Sign Up</button>
+    </div>
+
+    <script>
+        // Simulate checking if the user is logged in
+        const isLoggedIn = false; // Change to true to simulate logged-in user
+
+        if (isLoggedIn) {
+            document.getElementById('welcome-message').textContent = 'Welcome back! Ready to chat?';
+            document.getElementById('buttons').innerHTML = `
+                <button onclick="location.href='/chat'">Go to Chat</button>
+                <button onclick="location.href='/logout'">Logout</button>
+            `;
+        }
+    </script>
+</body>
+</html>
