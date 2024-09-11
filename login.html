@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Chatify</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">Chatify</div>
+            <div class="nav-links">
+                <a href="Homepage.html" class="btn home-btn">Home</a>
+                <a href="signup.html" class="btn signup-btn">Sign Up</a>
+            </div>
+        </nav>
+
+        <div class="login-section">
+            <h1>Welcome Back!</h1>
+            <p>Please login to continue</p>
+            <form action="submit_login.php" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="forgot-password.html" class="forgot-password-link">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn primary-btn">Login</button>
+            </form>
+
+            <div class="signup-prompt">
+                <p>Don't have an account? <a href="signup.html" class="signup-link">Sign Up here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
